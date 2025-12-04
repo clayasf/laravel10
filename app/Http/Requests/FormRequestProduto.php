@@ -22,7 +22,7 @@ class FormRequestProduto extends FormRequest
     public function rules(): array
     {
 
-        if ($this->isMethod('post')) {
+        if ($this->isMethod('post') || $this->isMethod('put')) {
             return [
                 'nome' => 'required|string|max:255',
                 'valor' => 'required|min:0',
