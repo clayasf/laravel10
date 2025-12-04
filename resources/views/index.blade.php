@@ -259,11 +259,12 @@
         <div class="row">
             @include('componests.navegacao')
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                @yield('content')
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">Dashboard</h1>
                 </div> 
+                
+                @yield('content')
                 {{-- <h2>Section title</h2>
                 <div class="table-responsive small">
                     <table class="table table-striped table-sm">
@@ -396,11 +397,16 @@
         </div>
     </div>
     @yield('scripts')
-    <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{asset('js/dashboard.js')}}"></script>
     
     <script src="{{asset('js/color-modes.js')}}"></script>
+    <script src="{{asset('js/projeto.js')}}"></script>
 </body>
 
 </html>
